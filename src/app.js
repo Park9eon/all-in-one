@@ -1,7 +1,8 @@
 'use strict';
 
 const Hapi = require('hapi');
-const {info, error, event} = require('./logger');
+const {info, error} = require('./logger');
+const plugins = require('./plugins');
 const routes = require('./routes');
 
 const server = Hapi.server({
@@ -11,8 +12,8 @@ const server = Hapi.server({
 
 const init = async () => {
     routes(server);
-    event(server);
     try {
+        await plugins(server);
         await server.start();
     } catch (e) {
         error(e);

@@ -17,13 +17,4 @@ const logger = createLogger({
     transports: [new transports.Console()]
 });
 
-logger.event = (server) => {
-    server.events.on('log', (event, tags) => {
-        logger.info(tags);
-        if (tags.error) {
-            logger.error(event.error ? event.error.message : 'unknown');
-        }
-    });
-};
-
 module.exports = logger;
