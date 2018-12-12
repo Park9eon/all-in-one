@@ -12,9 +12,13 @@ const logger = createLogger({
         colorize(),
         timestamp(),
         prettyPrint(),
-        printWithColor
+        printWithColor,
     ),
     transports: [new transports.Console()]
 });
+
+logger.json = (level, obj) => {
+    logger.log(level, JSON.stringify(obj, 4));
+};
 
 module.exports = logger;

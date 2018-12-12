@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "apollo-server": "^2.2.6",
+    "apollo-server-hapi": "^2.0.0-rc.10",
     "dotenv": "^6.2.0",
     "good": "^8.1.1",
-    "graphql": "^14.0.2",
+    "graphql": "^0.13.1",
     "hapi": "^17.8.1",
     "hapi-good-winston": "^2.1.0",
     "mongodb": "^3.1.10",

@@ -1,3 +1,5 @@
+'use strict';
+
 const {goodWinston} = require('hapi-good-winston');
 const logger = require('./logger');
 
