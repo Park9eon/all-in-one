@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi');
 const {info, error} = require('./logger');
+const mongo = require('./mongo');
 const plugins = require('./plugins');
 const routes = require('./routes');
 const apollo = require('./apollo');
@@ -17,6 +18,7 @@ server.use = (async function (use) {
 
 const init = async () => {
     try {
+        await server.use(mongo);
         await server.use(plugins);
         await server.use(routes);
         await server.use(apollo);
