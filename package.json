@@ -1,0 +1,28 @@
+{
+  "name": "foodnote",
+  "version": "0.0.1",
+  "description": "음식입력서버",
+  "author": "Park9eon",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "pm2-dev start app.config.js",
+    "start": "NODE_ENV=production pm2 start app.config.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.2.6",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "hapi": "^17.8.1",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.15",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "pm2": "^3.2.3"
+  }
+}
