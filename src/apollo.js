@@ -17,7 +17,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
-    food(name: String, kcal: Float): Food
+    food(name: String  kcal: Float): Food
     }
 `;
 
